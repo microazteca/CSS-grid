@@ -1,11 +1,12 @@
 .container{
 	display: grid;
 	/* “unidad fr” viene de fracción, ésta indica el espacio disponible que tenemos, por ejemplo a una columna se le da el 25% del espacio y a la segunda columna se le da 1fr, o sea, que ocupe el demás espacio que sobre, así no se nos crea un scrollbar */
-	grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+	grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
 	/* "repeat" nos sirve para no estar poniendo "10px 10px 10px 10px 10px", así solo pones repeat y dentro de los paréntesis las veces que quieres repetir las medidas */
-	grid-template-rows: repeat(8,100px);
+	grid-template-rows: repeat(6,150px);
 	/* grid-gap es para definir la separación entre cada div */
 	grid-gap: 10px;
+		grid-auto-flow: row dense;
 }
 
 .container >.item{
@@ -24,7 +25,7 @@
 
 .container >.item:nth-child(10){
 	grid-column: span 3;
-	grid-row: span 3;
+	grid-row: span 2;
 }
 
 .container >.item >img{
